@@ -1,0 +1,24 @@
+x00 XOR y00 -> z00 
+x00 AND y00 -> d00
+
+x01 XOR y01 -> a01
+x01 AND y01 -> b01
+a01 XOR d00 -> z01
+a01 AND d00 -> c01
+b01 OR  c01 -> d01
+
+...
+
+x(i) XOR y(i)   -> a(i)
+x(i) AND y(i)   -> b(i)
+a(i) XOR d(i-1) -> z(i)
+a(i) AND d(i-1) -> c(i)
+b(i) OR  c(i)   -> d(i)
+
+...
+
+x(n) XOR y(n)   -> a(n)
+x(n) AND y(n)   -> b(n)
+a(n) XOR d(n-1) -> z(n)
+a(n) AND d(n-1) -> c(n)
+b(n) OR  c(n)   -> z(n+1)

@@ -1,0 +1,4 @@
+usage: 
+
+go run main.go
+DEBUG= go run main.go
